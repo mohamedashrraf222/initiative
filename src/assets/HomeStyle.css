@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h4,
+h6,
+p,
+a {
+  direction: rtl;
+}
+
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: white;
+  background-color: #0c3b2e;
+}
+
+.left-section {
+  width: 70%;
+  /* background-color: blue; */
+  position: relative;
+  top: 10vh;
+  height: calc(100vh - 80px);
+  padding: 0 77px;
+  padding-top: 102px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-section h1 {
+  font-size: 40px;
+  text-align: start;
+  padding-bottom: 4vh;
+}
+
+.left-section h4 {
+  font-size: 20px;
+  padding-bottom: 12vh;
+}
+
+.left-section h6 {
+  font-size: 14px;
+}
+
+.left-section a:hover {
+  transform: scale(1.05);
+}
+.left-section a {
+  transition: all 0.2s ease-in-out;
+  margin-top: 60px;
+  display: block;
+  border: none;
+  width: fit-content;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  background-color: #ffba00;
+  align-self: flex-end;
+}
+
+.right-section {
+  height: calc(100vh - 80px);
+  /* background-color: #ffffff4b; */
+  width: 50%;
+  /* height: 100vh; */
+  overflow: hidden;
+  position: relative;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-section > img:nth-of-type(1) {
+  object-fit: contain;
+  height: 30%;
+  width: 70%;
+  translate: 10% 40%;
+}
+.right-section > img:nth-of-type(2) {
+  width: 40%;
+  object-fit: contain;
+  height: 30%;
+  translate: 70% 10%;
+}
+.right-section > img:nth-of-type(3) {
+  width: 80%;
+  translate: 20% -20%;
+  object-fit: contain;
+  height: 30%;
+}
+
+@media screen and (max-width: 800px) {
+  .left-section {
+    padding: 15vh 25px 0 20px;
+  }
+  .left-section h1 {
+    font-size: 20px;
+  }
+
+  .left-section h4 {
+    font-size: 13px;
+  }
+  .left-section h6 {
+    font-size: 15px;
+  }
+  .left-section a {
+    font-size: 10px;
+  }
+  .right-section {
+    justify-content: unset;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right-section > img:nth-of-type(1) {
+    object-fit: contain;
+    /* height: auto; */
+    width: 70%;
+    translate: 10px 10%;
+    align-self: flex-start;
+  }
+  .right-section > img:nth-of-type(2) {
+    width: 100%;
+    object-fit: contain;
+    /* height: auto; */
+
+    translate: 0 -10%;
+  }
+  .right-section > img:nth-of-type(3) {
+    width: 80%;
+    translate: -5px -40%;
+    object-fit: contain;
+    /* height: auto; */
+    align-self: flex-end;
+  }
+}
